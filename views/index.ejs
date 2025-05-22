@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <a href="/new">Yeni Mesaj Ekle</a>
+
+  <ul>
+    <% messages.forEach(message => { %>
+      <li>
+        <strong><%= message.user %>:</strong>
+        <%= message.text %>
+        <br>
+        <small><%= message.added.toLocaleString() %></small>
+        <br>
+        <br>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
