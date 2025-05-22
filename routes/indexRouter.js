@@ -5,13 +5,13 @@ const router = express.Router();
 
 const messages = [
   {
-    text: "Hi there!",
-    user: "Amando",
+    text: "Merhaba!",
+    user: "İlhami",
     added: new Date()
   },
   {
-    text: "Hello World!",
-    user: "Charles",
+    text: "Hoş geldiniz!",
+    user: "Batuhan",
     added: new Date()
   }
 ];

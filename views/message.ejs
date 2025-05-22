@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesaj detayı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h1><%= message.user %> adlı kullanıcının mesajı</h1>
-    <p><strong>Mesajı: </strong> <%= message.text %></p>
-    <p><small>Tarih: <&= message.added.toLocaleString() %></small></p>
+<body class="bg-gradient-to-br from-purple-50 to-cyan-50 min-h-screen">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-sm border border-purple-100">
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-2xl font-semibold text-purple-800">
+                    <%= message.user %> adlı kullanıcının mesajı
+                </h1>
+                <a href="/" class="text-purple-600 hover:text-purple-700 transition-colors duration-200">
+                    ← Anasayfa
+                </a>
+            </div>
 
-    <a href="/">Anasayfa</a>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-purple-50 to-cyan-50 p-6 rounded-lg border border-purple-100">
+                    <p class="text-gray-700 text-lg"><%= message.text %></p>
+                </div>
+                
+                <div class="text-sm text-cyan-600">
+                    <p>Tarih: <%= message.added.toLocaleString() %></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
